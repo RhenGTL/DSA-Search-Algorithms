@@ -230,6 +230,7 @@ body{
     border: 3px solid #00bfff; 
     border-radius: 5px;
     cursor: pointer; 
+    outline: none;
     margin-top: 20px;
     padding: 5px 15px;
     width: 150px;
