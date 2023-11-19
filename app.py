@@ -16,7 +16,7 @@ Session(app)
 def index():
     size = 100
     if 'dataset' not in session:
-        data = sorted(random.sample(range(1, (size * 10) + 1), size))
+        data = sorted(range(1, size + 1))
         session['dataset'] = ", ".join(map(str, data))
         session['target'] = random.choice(data)
         session['size'] = size
@@ -24,7 +24,7 @@ def index():
     if request.method == "POST":
         if 'generate' in request.form:
             size = int(request.form.get('size'))
-            data = sorted(random.sample(range(1, (size * 10) + 1), size))
+            data = sorted(range(1, size + 1))
             session['dataset'] = ", ".join(map(str, data))
             session['target'] = random.choice(data)
         elif 'search' in request.form:
